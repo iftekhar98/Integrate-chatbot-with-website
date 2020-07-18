@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Control panel</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="bg">
+		<div>
+<form id="robotBox" method="post" action="insert_database.php">
+	<input type="submit" name="direction" value="F" class="image-container forward-button">
+	<input type="submit" name="direction" value="B" class="image-container backward-button">
+	<input type="submit" name="direction" value="R" class="image-container right-button" >
+	<input type="submit" name="direction" value="L" class="image-container left-button" >
+	<input type="submit" name="direction" value="S" class="image-container stop-button">
+
+</form>
+       </div>
+    </div>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "8e75c2a3-b2e0-412d-ac81-82379570db4d", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "8ff37afa-b4df-4788-a95f-092b3cf4e724", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
